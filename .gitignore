@@ -1,0 +1,5 @@
+node_modules/
+test_images/*.jpg
+test_images/*.png
+test_images/*.webp
+.DS_Store

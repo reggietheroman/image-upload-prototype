@@ -1,0 +1,23 @@
+{
+  "name": "image-upload",
+  "version": "1.0.0",
+  "description": "Prototype image upload using node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "node.js",
+    "image",
+    "upload"
+  ],
+  "author": "Reggie Bigornia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "file-type": "^21.0.0",
+    "multer": "^2.0.2",
+    "sharp": "^0.34.3"
+  }
+}

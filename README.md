@@ -24,4 +24,4 @@ curl -X POST "http://localhost:3000/convert" \
 ## To Do
 - [ ] Add config file
 - [ ] Add resolutions file for quick list of max height and width for converted image
-- [ ] Break up index.js file
+- [x] Break up index.js file

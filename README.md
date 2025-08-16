@@ -29,5 +29,5 @@ curl -X POST "http://localhost:3000/convert" \
 - [x] Break up index.js file
 
 ### Scope creep
-- [ ] Clean up convert.js and upload.js files (maybe use classes)
+- [x] Clean up convert.js and upload.js files (maybe use classes)
 - [ ] Move the express.js functions out of the index.js file also

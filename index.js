@@ -1,8 +1,7 @@
-// index.js
 const express = require('express');
 const { fileTypeFromBuffer } = require('file-type');
 const { UPLOAD } = require('./src/upload.js');
-const { CONVERT, setImageMax } = require('./src/convert.js');
+const { Convert } = require('./src/convert.js');
 
 const app = express();
 
@@ -24,8 +23,8 @@ app.post('/convert', UPLOAD.single('image'), async (req, res) => {
     // - If the source is PNG (often graphics), nearLossless can help preserve crisp lines while still shrinking.
     const isPng = detected.mime === 'image/png';
 
-    setImageMax(req.query.w, req.query.h);
-    const output = await CONVERT(isPng, req.file.buffer);
+    const converter = new Convert(req.query.w, req.query.h);
+    const output = await converter.toWebp(isPng, req.file.buffer);
 
     // Respond with the converted WebP bytes.
     // You can also save to disk or S3 if you prefer.
